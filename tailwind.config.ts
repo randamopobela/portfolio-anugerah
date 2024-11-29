@@ -14,6 +14,9 @@ export default {
             fontFamily: {
                 poppins: ["Poppins", "sans-serif"],
             },
+            colors: {
+                "normal-hover": "#0076E4",
+            },
         },
     },
     plugins: [],

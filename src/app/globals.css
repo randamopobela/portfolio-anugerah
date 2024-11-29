@@ -10,14 +10,27 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
 
 body {
-    /* color: var(--foreground); */
-    /* background: var(--background); */
-    /* font-family: Poppins, sans-serif; */
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Poppins, sans-serif;
+} */
+
+@layer components {
+    .text-gradient {
+        background: linear-gradient(to right, #00b1fd, #0041e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-hover {
+        background: linear-gradient(to bottom right, #00b1fd, #0076e4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

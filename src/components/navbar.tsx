@@ -1,3 +1,5 @@
+import { ListNavbar } from "./navbar-list";
+
 export function Navbar() {
     return (
         <nav className="flex justify-center w-full bg-white py-8 mx-4 lg:mx-0 fixed top-0 z-10">
@@ -11,46 +13,11 @@ export function Navbar() {
                 <div className="flex gap-9">
                     {/* List Menu */}
                     <ul className="flex font-bold gap-10">
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-600 hover:text-hover"
-                            >
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-600 hover:text-hover"
-                            >
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-600 hover:text-hover"
-                            >
-                                My Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-600 hover:text-hover"
-                            >
-                                Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-600 hover:text-hover"
-                            >
-                                Contact
-                            </a>
-                        </li>
+                        <ListNavbar navList="Home" />
+                        <ListNavbar navList="About" />
+                        <ListNavbar navList="My Skills" />
+                        <ListNavbar navList="Projects" />
+                        <ListNavbar navList="Contact" />
                     </ul>
                 </div>
             </div>

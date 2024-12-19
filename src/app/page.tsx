@@ -20,7 +20,7 @@ export default function Home() {
                                     Anugerah Mopobela
                                 </span>
                                 <h1> I'm a Full-Stack Web Developer</h1>
-                                <p className="py-2 font-light text-sm">
+                                <p className="py-2 font-light text-base">
                                     I build functional, responsive, and scalable
                                     web applications using modern technologies
                                     like React, Node.js, and MongoDB.

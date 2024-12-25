@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar";
+import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
 import Image from "next/image";
 
@@ -8,9 +9,12 @@ export default function Home() {
             <header>
                 <Navbar />
             </header>
-            <main className="flex flex-col justify-center items-center mt-24">
+            <main className="flex flex-col justify-center items-center mt-14">
                 {/* Hero Section */}
-                <section className="flex justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0 gap-3">
+                <section
+                    id="home"
+                    className="flex justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0 gap-3"
+                >
                     {/* Hello */}
                     <div className="flex flex-col items-center font-bold text-slate-700 text-3xl">
                         <div className="lg:w-3/4">
@@ -101,7 +105,7 @@ export default function Home() {
                                         {/* <button className="flex justify-center items-center bg-slate-400 text-lg text-gradient">
                                             Contact Me
                                         </button> */}
-                                        <button className="bg-slate-600 text-lg text-gradient py-1 rounded-md hover:scale-105">
+                                        <button className="bg-slate-600 text-lg text-gradient py-1 rounded-md hover:scale-105 easy-out duration-200">
                                             Contact Me
                                         </button>
                                     </div>
@@ -112,14 +116,14 @@ export default function Home() {
 
                     {/* Foto Profil */}
                     <div className="flex h-auto">
-                        <div className="relative flex justify-center scale-90 max-w-">
+                        <div className="relative flex justify-center scale-90 max-w-sm md:max-w-md">
                             {/* <!-- Gambar Profil --> */}
                             <Image
                                 src="/assets/images/profile.jpg"
                                 alt="Profile"
-                                width={480}
-                                height={480}
-                                className="relative object-cover items-center rounded-full lg:max-w-sm"
+                                width={440}
+                                height={440}
+                                className="relative object-cover items-center rounded-full"
                             />
                         </div>
                         {/* <div className="container rounded-md flex justify-center items-center lg:w-1/2">
@@ -128,14 +132,20 @@ export default function Home() {
                 </section>
 
                 {/* About Section */}
-                <section className="flex justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0">
+                <section
+                    id="about"
+                    className="flex justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0"
+                >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-bold text-2xl">About</h1>
                     </div>
                 </section>
 
-                {/* Tech Stack Section */}
-                <section className="flex flex-col justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0">
+                {/* My Skills Section */}
+                <section
+                    id="myskills"
+                    className="flex flex-col justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0"
+                >
                     <div className="flex flex-col justify-center items-center gap-3">
                         <h1 className="font-bold text-2xl">My Skills</h1>
                         <p>Technologies I've been working with recently</p>
@@ -144,44 +154,64 @@ export default function Home() {
                     {/* Icon Skills */}
                     <div className="flex justify-center items-center flex-wrap mt-8 gap-10 lg:max-w-screen-md">
                         <Skills
-                            imageLink="/assets/images/skill-icons-html.png"
-                            imageAlt="HTML"
-                            imageTitle="HTML"
+                            skillImageLink="/assets/images/skill-icons-html.png"
+                            skillImageAlt="HTML"
+                            skillImageTitle="HTML"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-css.png"
-                            imageAlt="CSS"
-                            imageTitle="CSS"
+                            skillImageLink="/assets/images/skill-icons-css.png"
+                            skillImageAlt="CSS"
+                            skillImageTitle="CSS"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-javascript.png"
-                            imageAlt="Javascript"
-                            imageTitle="JavaScript"
+                            skillImageLink="/assets/images/skill-icons-javascript.png"
+                            skillImageAlt="Javascript"
+                            skillImageTitle="JavaScript"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-typescript.png"
-                            imageAlt="typescript"
-                            imageTitle="TypeScript"
+                            skillImageLink="/assets/images/skill-icons-typescript.png"
+                            skillImageAlt="typescript"
+                            skillImageTitle="TypeScript"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-tailwindcss-dark.png"
-                            imageAlt="tailwindcss"
-                            imageTitle="TailwindCSS"
+                            skillImageLink="/assets/images/skill-icons-tailwindcss-dark.png"
+                            skillImageAlt="tailwindcss"
+                            skillImageTitle="TailwindCSS"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-react-dark.png"
-                            imageAlt="reactjs"
-                            imageTitle="ReactJS"
+                            skillImageLink="/assets/images/skill-icons-react-dark.png"
+                            skillImageAlt="reactjs"
+                            skillImageTitle="ReactJS"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-nodejs-dark.png"
-                            imageAlt="nodejs"
-                            imageTitle="NodeJS"
+                            skillImageLink="/assets/images/skill-icons-nodejs-dark.png"
+                            skillImageAlt="nodejs"
+                            skillImageTitle="NodeJS"
                         />
                         <Skills
-                            imageLink="/assets/images/skill-icons-mysql-light.png"
-                            imageAlt="mysql"
-                            imageTitle="MySQL"
+                            skillImageLink="/assets/images/skill-icons-mysql-light.png"
+                            skillImageAlt="mysql"
+                            skillImageTitle="MySQL"
+                        />
+                    </div>
+                </section>
+
+                {/* Projects Section */}
+                <section
+                    id="projects"
+                    className="flex flex-col justify-evenly items-center flex-wrap lg:flex-nowrap w-fit lg:w-4/5 my-10 lg:my-20 mx-4 lg:mx-0"
+                >
+                    <div className="flex flex-col justify-center items-center gap-3">
+                        <h1 className="font-bold text-2xl">Project</h1>
+                        <p>Things I've built so far</p>
+                    </div>
+
+                    {/* Projects List */}
+                    <div className="flex justify-center items-center flex-wrap mt-8 gap-10 lg:max-w-screen-md">
+                        <Projects
+                            projectImageLink="/assets/images/skill-icons-html.png"
+                            projectImageAlt="HTML"
+                            projectName="HTML"
                         />
                     </div>
                 </section>
